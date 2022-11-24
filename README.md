@@ -25,8 +25,20 @@ visualizations.
 #
 
 ## 1. Ask
-:red_circle: **GOAL:: Design marketing strategies aimed at converting casual riders into annual members**
+:red_circle: **GOAL: Design marketing strategies aimed at converting casual riders into annual members**
 
 Primary stakeholders: Lily Moreno & Cyclistic executive team
 
 Secondary stakeholders: Cyclistic marketing analytics team
+
+## 2. Prepare 
+Data Source: [Clistic’s Historical Trip Data](https://divvytripdata.s3.amazonaws.com/index.html)
+
+Dataset made available through [Motivate International Inc.](https://ride.divvybikes.com/data-license-agreement) 
+
+The dataset follows the **ROCCC** approach
+- Reliability ✅
+- Original ✅ 
+- Comprehensive? 🤔 I Think That if The Dataset Included the Price of the Bikes and The age of the Users, It Could Have Lead To a Better Analysis and More Informative Insights.  
+- Current ✅   Data is from September 2021 to August 2022(Past 12 Months)
+- Cited ✅ 
