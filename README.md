@@ -42,3 +42,72 @@ The dataset follows the **ROCCC** approach
 - Comprehensive? 🤔 I Think That if The Dataset Included the Price of the Bikes and The age of the Users, It Could Have Lead To a Better Analysis and More Informative Insights.  
 - Current ✅   Data is from September 2021 to August 2022(Past 12 Months)
 - Cited ✅ 
+
+## 3. Process
+### SQL Data Processing
+#### Combining All Tables in One Table to Ease the Analysis After Creating Cyclistics Database 
+```
+SELECT *
+	INTO cyc_12_mnth
+	FROM
+(SELECT * FROM dbo.[tripdata_09-2021]
+UNION ALL
+SELECT * FROM dbo.[tripdata_10-2021]
+UNION ALL
+SELECT * FROM dbo.[tripdata_11-2021]
+UNION ALL
+SELECT * FROM dbo.[tripdata_12-2021]
+UNION ALL
+SELECT * FROM dbo.[tripdata_01-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_02-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_03-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_04-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_05-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_06-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_07-2022]
+UNION ALL
+SELECT * FROM dbo.[tripdata_08-2022]
+) t
+```
+
+#### Add Ride length Column
+```
+ALTER TABLE CYC_12_MNTH
+ADD ride_length_min AS
+ABS(DATEDIFF(mi, ended_at,started_at))
+```
+
+#### Add Day of Week Column
+```
+ALTER TABLE CYC_12_MNTH
+ADD day_of_week AS DATENAME(WEEKDAY, started_at)
+```
+
+#### Drop NUll unusable columns
+```
+ALTER TABLE CYC_12_MNTH
+DROP COLUMN start_station_name, end_station_name, start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng
+```
+
+```
+#### Drop Ride length less than 1 minute
+DELETE FROM dbo.cyc_12_mnth WHERE ride_length_min <= 1
+```
+
+### Python Data Processing
+
+#### Loading used libraries
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import seaborn as sns
+sns.set()
+```
