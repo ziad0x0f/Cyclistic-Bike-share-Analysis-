@@ -111,3 +111,47 @@ import matplotlib.ticker as ticker
 import seaborn as sns
 sns.set()
 ```
+#### Importing used libraries for analysis 
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import seaborn as sns
+sns.set()
+```
+
+#### Importing the combined df_cyc table
+```
+df_cyc = pd.read_csv("D:\Courses\Data Analysis\Projects\Cyclistics\DATA\cleaned\cleaned_data.csv")
+df_cyc.head()
+```
+
+#### Coverting df_cyctypes of each column
+```
+df_cyc = df_cyc.astype({'ride_id':'string', 'rideable_type':'category','started_at': 'datetime64','ended_at': 'datetime64', 'member_casual':'category','day_of_week':'category'})
+df_cyc.info()
+```
+
+#### Trim whitespace in member_casual & rideable_type columns
+```
+df_cyc['member_casual'] = df_cyc['member_casual'].str.replace(' ', '')
+df_cyc['rideable_type'] = df_cyc['rideable_type'].str.replace(' ', '')
+df_cyc[['day_of_week','rideable_type']].nunique()
+```
+- day_of_week      7
+- rideable_type    3
+- dtype: int64
+
+#### Adding year, months & hours columns
+```
+df_cyc['year'] = df_cyc['started_at'].dt.year
+df_cyc['hour'] = df_cyc['started_at'].dt.hour
+df_cyc['month'] = df_cyc['started_at'].dt.month_name()
+df_cyc['month_year'] = df_cyc['started_at'].dt.to_period('M')
+```
+#### Convert month to category
+```
+df_cyc = df_cyc.astype({'month':'category'})
+df_cyc.info()
+```       
