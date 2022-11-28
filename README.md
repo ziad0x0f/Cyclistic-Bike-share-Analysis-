@@ -32,7 +32,7 @@ Primary stakeholders: Lily Moreno & Cyclistic executive team
 Secondary stakeholders: Cyclistic marketing analytics team
 
 ## 2. Prepare 
-Data Source: [Clistic’s Historical Trip Data](https://divvytripdata.s3.amazonaws.com/index.html)
+Data Source: [Cyclistic’s Historical Trip Data](https://divvytripdata.s3.amazonaws.com/index.html)
 
 Dataset made available through [Motivate International Inc.](https://ride.divvybikes.com/data-license-agreement) 
 
@@ -95,8 +95,8 @@ ALTER TABLE CYC_12_MNTH
 DROP COLUMN start_station_name, end_station_name, start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng
 ```
 
-```
 #### Drop Ride length less than 1 minute
+```
 DELETE FROM dbo.cyc_12_mnth WHERE ride_length_min <= 1
 ```
 
