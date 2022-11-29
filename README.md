@@ -1,4 +1,4 @@
-# Cyclistic Bike share Analysis
+# Cyclistic Bike Share Analysis
 
 ##### Author: Ziad Zakaria 
 
