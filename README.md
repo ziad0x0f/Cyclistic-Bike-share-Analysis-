@@ -159,6 +159,7 @@ df_cyc.info()
 ```       
 ![Screenshot 2022-11-28 160855](https://user-images.githubusercontent.com/100311796/204298744-3bca5a84-835b-422f-9bbf-2d26edd04684.png)
 
+## 4. Analyze
 ### Ride Length Analysis
 
 ```
@@ -304,4 +305,21 @@ plt.title("Rides per Hour ",fontweight ='bold', fontsize = 20, loc='left')
 
 - Docked bike type is **not a preffered option** for the Riders 
 
-- the Riders tend to Take More Rides in **Spring & Summer**
+- The Riders tend to Take More Rides in **Spring & Summer**
+
+- **Electric Bikes** are More Often Used During the Weekdays Except on Weekends, **Classic bikes** are More Preffered
+#
+
+## 5. Share
+##### [Tableau Dashboard](https://public.tableau.com/app/profile/ziad.zakaria/viz/CyclisticBikeShareAnalysis_16697170400300/Dashboard1)
+![Cyclistic Bike Share Analysis Dashboard (1)](https://user-images.githubusercontent.com/100311796/205303837-e0b8bab4-e4ae-4f08-9486-0bed8341b8ce.png)
+
+
+## 6. Act
+### Recommendations:
+
+- Build a **Bonus Point System** which Gives the Casual Riders a Promotion on the Annual Membership Based on the **Number of Rides** they Have Done During the Week   
+
+- Adding **Annual Saving Packages** for **Electric Bikes** to Attract Casual Riders and to convert them to Members
+
+- Adding **Annual Weekends Plan** for Casuals
