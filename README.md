@@ -193,7 +193,7 @@ palette = {"casual":"#EBF869",
 
 sns.barplot(x="day_of_week",
            y="ride_length",
-           hue="member_casual",
+           hue="member_casual",0
            palette=palette,
            data=ax)
 
@@ -312,7 +312,9 @@ plt.title("Rides per Hour ",fontweight ='bold', fontsize = 20, loc='left')
 
 ## 5. Share
 ##### [Tableau Dashboard](https://public.tableau.com/app/profile/ziad.zakaria/viz/CyclisticBikeShareAnalysis_16697170400300/Dashboard1)
-![Cyclistic Bike Share Analysis Dashboard (1)](https://user-images.githubusercontent.com/100311796/205303837-e0b8bab4-e4ae-4f08-9486-0bed8341b8ce.png)
+
+![Screenshot 2022-12-02 161802](https://user-images.githubusercontent.com/100311796/205313202-f53b53de-3768-4c59-8c82-9fc7b24bed25.png)
+
 
 
 ## 6. Act
